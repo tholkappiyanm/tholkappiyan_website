@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="M. Tholkappiyan — Data Scientist & Analyst. Transforming data into meaningful business insights with Python, ML, SQL, and Power BI.">
+    <title>M. Tholkappiyan | Data Scientist & Analyst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <span class="preloader-text">MT</span>
+            <div class="preloader-progress">
+                <div class="preloader-progress-bar" id="preloaderBar"></div>
+            </div>
+            <span class="preloader-status" id="preloaderStatus">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo"><span class="logo-dot"></span><span>Tholkappiyan</span></a>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#education" class="nav-link" data-section="education">Education</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="#hero" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#education" class="mobile-link">Education</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- ====================== HERO — CINEMATIC SEQUENTIAL SCROLL ====================== -->
+    <section id="hero" class="hero-section">
+        <div class="hero-scroll-spacer"></div>
+
+        <div class="hero-sticky" id="heroSticky">
+            <canvas id="heroCanvas"></canvas>
+            <div class="hero-vignette"></div>
+
+            <!-- PHASE 1: Name (appears → vanishes) -->
+            <div class="hero-phase hero-phase-name" id="heroName">
+                <span class="phase-greeting">Hello, I'm</span>
+                <h1 class="phase-name">M. Tholkappiyan</h1>
+            </div>
+
+            <!-- PHASE 2: Role (appears → vanishes) -->
+            <div class="hero-phase hero-phase-role" id="heroRole">
+                <span class="phase-role-tag">I am a</span>
+                <h2 class="phase-role-title">Data Scientist</h2>
+                <span class="phase-role-sub">&amp; Data Analyst</span>
+            </div>
+
+            <!-- PHASE 3: Data Into Decisions -->
+            <div class="hero-phase hero-phase-extra" id="heroExtra1">
+                <h2 class="phase-role-title" style="font-size: clamp(1.8rem, 4vw, 3.5rem);">Turn Data Into Decisions</h2>
+                <span class="phase-role-sub" style="font-size: clamp(0.9rem, 1.8vw, 1.2rem); max-width: 600px; display: block; line-height: 1.6; margin-top: 15px;">From raw numbers to real impact — uncover patterns, predict outcomes, and drive smarter choices with data science.</span>
+            </div>
+
+            <!-- PHASE 4: Data Is Everywhere -->
+            <div class="hero-phase hero-phase-extra" id="heroExtra2">
+                <h2 class="phase-role-title" style="font-size: clamp(1.8rem, 4vw, 3.5rem);">Data Is Everywhere.<br>Insight Is Rare.</h2>
+                <span class="phase-role-sub" style="font-size: clamp(0.9rem, 1.8vw, 1.2rem); max-width: 600px; display: block; line-height: 1.6; margin-top: 15px;">Businesses collect massive amounts of data — but without the right tools and models, it stays unused, messy, and overwhelming.</span>
+            </div>
+
+            <!-- PHASE 5: Info panel — RIGHT side -->
+            <div class="hero-info-panel" id="heroInfo">
+                <div class="info-panel-inner">
+                    <div class="info-line">
+                        <span class="info-icon">📍</span>
+                        <span>Cuddalore, India</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="info-icon">🎓</span>
+                        <span>B.Com — St. Joseph's College</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="info-icon">⚡</span>
+                        <span>Immediate Joiner</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="info-icon">🌍</span>
+                        <span>Open to Relocation</span>
+                    </div>
+                    <div class="info-chips">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>Power BI</span>
+                        <span>Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="hero-bottom" id="heroBottom">
+                <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+                <span class="scroll-text">Scroll to explore</span>
+            </div>
+
+            <!-- Progress -->
+            <div class="hero-progress" id="heroProgress">
+                <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="44" class="ring-bg"/>
+                    <circle cx="50" cy="50" r="44" class="ring-fill" id="ringFill"/>
+                </svg>
+                <span class="ring-frame" id="ringFrame">001</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== ABOUT ====================== -->
+    <section id="about" class="section about-section">
+        <div class="section-container">
+            <div class="section-label reveal-up">
+                <span class="label-num">01</span>
+                <span class="label-line"></span>
+                <span class="label-text">About Me</span>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text reveal-up">
+                    <h2 class="about-headline">Results-driven <span class="accent-text">Data Science</span> fresher</h2>
+                    <p class="about-body">With strong hands-on experience in <span class="text-glow">Python, Machine Learning, SQL, and Power BI</span>. Skilled in building end-to-end machine learning pipelines, developing interactive dashboards, and analyzing large datasets (50,000+ records).</p>
+                    <p class="about-body">Experienced in Exploratory Data Analysis (EDA), data preprocessing & feature engineering, statistical analysis & ETL pipelines, predictive analytics & data visualization.</p>
+                    <p class="about-body accent-quote">Able to convert complex data into meaningful business insights. Seeking an entry-level Data Scientist or Data Analyst role.</p>
+                    <div class="about-badges">
+                        <span class="badge-item">✔ Immediate Joiner</span>
+                        <span class="badge-item">✔ Open to Relocation</span>
+                    </div>
+                </div>
+                <div class="about-stats reveal-up" style="--delay:.1s">
+                    <div class="stat-card">
+                        <div class="stat-num">06</div>
+                        <div class="stat-label">Projects<br>Built</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">50K<span class="stat-plus">+</span></div>
+                        <div class="stat-label">Records<br>Analyzed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">05<span class="stat-plus">+</span></div>
+                        <div class="stat-label">Tools<br>Mastered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">03</div>
+                        <div class="stat-label">Certifi-<br>cations</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== SKILLS ====================== -->
+    <section id="skills" class="section skills-section">
+        <div class="section-container">
+            <div class="section-label reveal-up">
+                <span class="label-num">02</span>
+                <span class="label-line"></span>
+                <span class="label-text">Tech Stack</span>
+            </div>
+
+            <h2 class="section-headline reveal-up">Tools & technologies I <span class="accent-text">work with</span></h2>
+
+            <div class="skills-grid">
+                <div class="skill-card reveal-up" style="--delay:.05s">
+                    <div class="skill-card-head"><span class="skill-emoji">⌨️</span><h3>Programming</h3></div>
+                    <div class="skill-tags">
+                        <span>🐍 Python</span>
+                        <span>🗃️ SQL</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal-up" style="--delay:.1s">
+                    <div class="skill-card-head"><span class="skill-emoji">🤖</span><h3>Machine Learning</h3></div>
+                    <div class="skill-tags">
+                        <span>Classification</span>
+                        <span>Regression</span>
+                        <span>Model Tuning</span>
+                        <span>GridSearchCV</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal-up" style="--delay:.15s">
+                    <div class="skill-card-head"><span class="skill-emoji">📊</span><h3>BI Tools</h3></div>
+                    <div class="skill-tags">
+                        <span>📊 Power BI</span>
+                        <span>DAX</span>
+                        <span>Power Query</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal-up" style="--delay:.2s">
+                    <div class="skill-card-head"><span class="skill-emoji">🔬</span><h3>Analytics</h3></div>
+                    <div class="skill-tags">
+                        <span>EDA</span>
+                        <span>ETL</span>
+                        <span>Data Cleaning</span>
+                        <span>Feature Engineering</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal-up" style="--delay:.25s">
+                    <div class="skill-card-head"><span class="skill-emoji">🛠️</span><h3>Tools</h3></div>
+                    <div class="skill-tags">
+                        <span>📋 Excel</span>
+                        <span>🐙 Git</span>
+                        <span>📓 Jupyter</span>
+                        <span>💻 VS Code</span>
+                        <span>🗄️ MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal-up" style="--delay:.3s">
+                    <div class="skill-card-head"><span class="skill-emoji">📚</span><h3>Libraries</h3></div>
+                    <div class="skill-tags">
+                        <span>🐼 Pandas</span>
+                        <span>🧮 NumPy</span>
+                        <span>📉 Matplotlib</span>
+                        <span>🎨 Seaborn</span>
+                        <span>⚙️ Scikit-Learn</span>
+                        <span>🌐 Flask</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== PROJECTS ====================== -->
+    <section id="projects" class="section projects-section">
+        <div class="section-container">
+            <div class="section-label reveal-up">
+                <span class="label-num">03</span>
+                <span class="label-line"></span>
+                <span class="label-text">Featured Projects</span>
+            </div>
+
+            <h2 class="section-headline reveal-up">Real-world projects with <span class="accent-text">measurable impact</span></h2>
+
+            <!-- Project 1: Kidney Disease -->
+            <div class="project-card reveal-up" style="--delay:.05s">
+                <div class="project-card-left">
+                    <div class="project-icon-wrap"><span>🩺</span></div>
+                    <div class="project-tags"><span>Python</span><span>Scikit-learn</span><span>Flask</span><span>Pandas</span></div>
+                </div>
+                <div class="project-card-right">
+                    <h3>Chronic Kidney Disease Prediction</h3>
+                    <p>Built end-to-end ML classification pipeline using 400 patient records. Handled missing values using random sampling & mode imputation. Compared multiple models (Decision Tree, Random Forest, Gradient Boosting). Selected best model using GridSearchCV. Applied label encoding for 15 categorical features.</p>
+                    <div class="project-outcome">
+                        <span class="outcome-icon">🎯</span>
+                        <span>Accurate disease prediction system with real-time deployment via Flask</span>
+                    </div>
+                    <a href="https://demo-1-yr0g.onrender.com/" target="_blank" rel="noopener" class="project-live-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: Multi-Channel Sales -->
+            <div class="project-card reveal-up" style="--delay:.1s">
+                <div class="project-card-left">
+                    <div class="project-icon-wrap icon-blue"><span>📊</span></div>
+                    <div class="project-tags tags-blue"><span>Power BI</span><span>DAX</span><span>Power Query</span></div>
+                </div>
+                <div class="project-card-right">
+                    <h3>Multi-Channel Sales Dashboard</h3>
+                    <p>Analyzed 50,000+ sales records across business channels. Built KPI dashboards for revenue, growth, and performance tracking. Implemented AI-based anomaly detection & forecasting. Automated reporting process.</p>
+                    <div class="project-metrics">
+                        <div><strong>60%</strong><span>Manual Work Reduced</span></div>
+                        <div><strong>25%</strong><span>Faster Decisions</span></div>
+                        <div><strong>50K+</strong><span>Records</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Forbes Billionaires -->
+            <div class="project-card reveal-up" style="--delay:.15s">
+                <div class="project-card-left">
+                    <div class="project-icon-wrap icon-purple"><span>🌍</span></div>
+                    <div class="project-tags tags-purple"><span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span></div>
+                </div>
+                <div class="project-card-right">
+                    <h3>Forbes Billionaires Data Analysis</h3>
+                    <p>Analyzed 2,600+ global billionaires dataset. Identified top industries and wealth distribution trends. Created high-quality visualizations (200 DPI). Delivered insights for business storytelling.</p>
+                    <div class="project-outcome">
+                        <span class="outcome-icon">💡</span>
+                        <span>Key Insight: Finance & Investments dominate global wealth creation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Superstore ETL -->
+            <div class="project-card reveal-up" style="--delay:.2s">
+                <div class="project-card-left">
+                    <div class="project-icon-wrap icon-emerald"><span>🛒</span></div>
+                    <div class="project-tags tags-emerald"><span>Python</span><span>MySQL</span><span>Power BI</span></div>
+                </div>
+                <div class="project-card-right">
+                    <h3>Superstore End-to-End Analytics Pipeline</h3>
+                    <p>Built complete ETL pipeline (Extract → Transform → Load). Cleaned and processed raw data using Python. Stored structured data in MySQL. Connected Power BI for live dashboard reporting.</p>
+                    <div class="project-outcome">
+                        <span class="outcome-icon">⚡</span>
+                        <span>Fully automated data workflow with real-time analytics dashboard</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Sales Performance -->
+            <div class="project-card reveal-up" style="--delay:.25s">
+                <div class="project-card-left">
+                    <div class="project-icon-wrap icon-blue"><span>📈</span></div>
+                    <div class="project-tags tags-blue"><span>Power BI</span><span>DAX</span></div>
+                </div>
+                <div class="project-card-right">
+                    <h3>Sales Performance Analysis Dashboard</h3>
+                    <p>Analyzed large-scale sales dataset. Created KPI tracking system. Built interactive dashboard for stakeholders.</p>
+                    <div class="project-outcome">
+                        <span class="outcome-icon">🎯</span>
+                        <span>Faster business insights & strategy optimization for decision-makers</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Netflix -->
+            <div class="project-card reveal-up" style="--delay:.3s">
+                <div class="project-card-left">
+                    <div class="project-icon-wrap icon-red"><span>🎬</span></div>
+                    <div class="project-tags tags-red"><span>Power BI</span></div>
+                </div>
+                <div class="project-card-right">
+                    <h3>Netflix Content Analysis Dashboard</h3>
+                    <p>Analyzed 8,000+ titles dataset. Built time-series dashboard. Visualized release trends & ratings distribution.</p>
+                    <div class="project-outcome">
+                        <span class="outcome-icon">💡</span>
+                        <span>Clear insights for content strategy and acquisition decisions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== EDUCATION & CERTS ====================== -->
+    <section id="education" class="section education-section">
+        <div class="section-container">
+            <div class="section-label reveal-up">
+                <span class="label-num">04</span>
+                <span class="label-line"></span>
+                <span class="label-text">Education & Certifications</span>
+            </div>
+
+            <div class="edu-grid">
+                <!-- Education -->
+                <div class="edu-card reveal-up" style="--delay:.05s">
+                    <div class="edu-card-accent"></div>
+                    <span class="edu-badge">🎓 Education</span>
+                    <h3>Bachelor of Commerce (B.Com)</h3>
+                    <p class="edu-spec">Bank Management</p>
+                    <p class="edu-college">St. Joseph's College of Arts & Science (Autonomous), Cuddalore</p>
+                    <p class="edu-year">2021 — 2024</p>
+                    <div class="edu-courses">
+                        <span>Statistics</span>
+                        <span>Financial Analysis</span>
+                        <span>Database Management</span>
+                        <span>Business Analytics</span>
+                        <span>Data Interpretation</span>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="edu-card card-alt reveal-up" style="--delay:.15s">
+                    <div class="edu-card-accent accent-alt"></div>
+                    <span class="edu-badge badge-alt">📜 Certifications</span>
+
+                    <div class="cert-item">
+                        <h4>Data Science Certification</h4>
+                        <p>Besant Technologies — 2025</p>
+                    </div>
+                    <div class="cert-item">
+                        <h4>Power BI Professional Certification</h4>
+                        <p>Office Master — 2025</p>
+                    </div>
+                    <div class="cert-item">
+                        <h4>AI Tools Mastery</h4>
+                        <p>Be10x — 2025</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- ====================== CONTACT ====================== -->
+    <section id="contact" class="section contact-section">
+        <div class="section-container">
+            <div class="section-label reveal-up">
+                <span class="label-num">05</span>
+                <span class="label-line"></span>
+                <span class="label-text">Get in Touch</span>
+            </div>
+
+            <h2 class="section-headline reveal-up">Let's build something <span class="accent-text">impactful</span></h2>
+            <p class="section-sub reveal-up">Ready to transform data into decisions? Let's connect.</p>
+
+            <div class="contact-list">
+                <a href="mailto:tholkappiyanm7@gmail.com" class="contact-row reveal-up" style="--delay:.05s">
+                    <div class="cr-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                    <div class="cr-text"><h4>Email</h4><p>tholkappiyanm7@gmail.com</p></div>
+                    <span class="cr-arrow">→</span>
+                </a>
+                <a href="tel:+918667425626" class="contact-row cr-emerald reveal-up" style="--delay:.1s">
+                    <div class="cr-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+                    <div class="cr-text"><h4>Phone</h4><p>+91 86674 25626</p></div>
+                    <span class="cr-arrow">→</span>
+                </a>
+                <a href="https://www.linkedin.com/in/tholkappiyan-m-61a754294/" target="_blank" rel="noopener" class="contact-row cr-blue reveal-up" style="--delay:.15s">
+                    <div class="cr-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+                    <div class="cr-text"><h4>LinkedIn</h4><p>Connect with me</p></div>
+                    <span class="cr-arrow">→</span>
+                </a>
+                <a href="https://github.com/tholkappiyanm" target="_blank" rel="noopener" class="contact-row cr-purple reveal-up" style="--delay:.2s">
+                    <div class="cr-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
+                    <div class="cr-text"><h4>GitHub</h4><p>github.com/tholkappiyanm</p></div>
+                    <span class="cr-arrow">→</span>
+                </a>
+            </div>
+
+            <div class="contact-extra reveal-up" style="--delay:.25s">
+                <div class="extra-row"><span class="extra-label">Languages</span><span class="extra-val">Tamil (Native) · English (Professional)</span></div>
+                <div class="extra-row"><span class="extra-label">Soft Skills</span><span class="extra-val">Problem Solving · Analytical Thinking · Communication</span></div>
+                <div class="extra-row"><span class="extra-label">Availability</span><span class="extra-val accent-text">Immediate Joiner · Open to Relocation</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-dot"></span>
+            <span class="footer-name">M. Tholkappiyan</span>
+            <p>© 2026 All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="hero-sequence.js?v=6"></script>
+    <script src="script.js?v=6"></script>
+</body>
+</html>
